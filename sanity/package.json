@@ -1,10 +1,10 @@
 {
-  "name": "sanityamazona",
+  "name": "letsShop",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Basir Jafarzadeh <basirjafarzadeh@gmail.com>",
+  "author": "Rashi Sharma",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -30,6 +30,6 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/basir/sanity-amazona.git"
+    "url": "https://github.com/rashi-06/major-project"
   }
 }

@@ -131,7 +131,7 @@ export default function Layout({ title, description, children }) {
   return (
     <>
       <Head>
-        <title>{title ? `${title} - Sanity Amazona` : 'Sanity Amazona'}</title>
+        <title>{title ? `${title} - LetsShop` : 'LetsShop'}</title>
         {description && <meta name="description" content={description}></meta>}
       </Head>
       <ThemeProvider theme={theme}>
@@ -149,7 +149,7 @@ export default function Layout({ title, description, children }) {
               </IconButton>
               <NextLink href="/" passHref>
                 <Link>
-                  <Typography sx={classes.brand}>amazona</Typography>
+                  <Typography sx={classes.brand}>LetsShop</Typography>
                 </Link>
               </NextLink>
             </Box>
@@ -165,7 +165,7 @@ export default function Layout({ title, description, children }) {
                     alignItems="center"
                     justifyContent="space-between"
                   >
-                    <Typography>Shopping by category</Typography>
+                    <Typography>Shop by Category</Typography>
                     <IconButton
                       aria-label="close"
                       onClick={sidebarCloseHandler}
@@ -277,7 +277,7 @@ export default function Layout({ title, description, children }) {
           {children}
         </Container>
         <Box component="footer" sx={classes.footer}>
-          <Typography>All rights reserved. Sanity Amazona.</Typography>
+          <Typography>All rights reserved. LetsShop.</Typography>
         </Box>
       </ThemeProvider>
     </>

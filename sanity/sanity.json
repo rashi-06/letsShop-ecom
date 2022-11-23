@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "sanity-amazona"
+    "name": "letsShop"
   },
   "api": {
-    "projectId": "ptju5yb0",
+    "projectId": "w8get3up",
     "dataset": "production"
   },
   "plugins": [
