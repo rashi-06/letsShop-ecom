@@ -6,7 +6,7 @@ import {
   List,
   ListItem,
   MenuItem,
-  Rating,
+ 
   Select,
   Typography,
 } from '@mui/material';
@@ -37,7 +37,7 @@ const prices = [
   },
 ];
 
-const ratings = [1, 2, 3, 4, 5];
+// const ratings = [1, 2, 3, 4, 5];
 
 export default function SearchScreen() {
   const router = useRouter();
@@ -45,7 +45,7 @@ export default function SearchScreen() {
     category = 'all',
     query = 'all',
     price = 'all',
-    rating = 'all',
+    // rating = 'all',
     sort = 'default',
   } = router.query;
   const [state, setState] = useState({
@@ -82,14 +82,14 @@ export default function SearchScreen() {
           const maxPrice = Number(price.split('-')[1]);
           gQuery += ` && price >= ${minPrice} && price <= ${maxPrice}`;
         }
-        if (rating !== 'all') {
-          gQuery += ` && rating >= ${Number(rating)} `;
-        }
+        // if (rating !== 'all') {
+        //   gQuery += ` && rating >= ${Number(rating)} `;
+        // }
         let order = '';
         if (sort !== 'default') {
           if (sort === 'lowest') order = '| order(price asc)';
           if (sort === 'highest') order = '| order(price desc)';
-          if (sort === 'toprated') order = '| order(rating desc)';
+          // if (sort === 'toprated') order = '| order(rating desc)';/
         }
 
         gQuery += `] ${order}`;
@@ -102,16 +102,16 @@ export default function SearchScreen() {
       }
     };
     fetchData();
-  }, [category, price, query, rating, sort]);
+  }, [category, price, query, sort]);
 
-  const filterSearch = ({ category, sort, searchQuery, price, rating }) => {
+  const filterSearch = ({ category, sort, searchQuery, price }) => {
     const path = router.pathname;
     const { query } = router;
     if (searchQuery) query.searchQuery = searchQuery;
     if (category) query.category = category;
     if (sort) query.sort = sort;
     if (price) query.price = price;
-    if (rating) query.rating = rating;
+    // if (rating) query.rating = rating;
 
     router.push({
       pathname: path,
@@ -127,9 +127,9 @@ export default function SearchScreen() {
   const priceHandler = (e) => {
     filterSearch({ price: e.target.value });
   };
-  const ratingHandler = (e) => {
-    filterSearch({ rating: e.target.value });
-  };
+  // const ratingHandler = (e) => {
+  //   filterSearch({ rating: e.target.value });
+  // };
 
   const {
     state: { cart },
@@ -196,7 +196,7 @@ export default function SearchScreen() {
               </Box>
             </ListItem>
             <ListItem>
-              <Box sx={classes.fullWidth}>
+              {/* <Box sx={classes.fullWidth}> */}
                 {/* <Typography>Ratings</Typography>
                 <Select value={rating} onChange={ratingHandler} fullWidth>
                   <MenuItem value="all">All</MenuItem>
@@ -207,7 +207,7 @@ export default function SearchScreen() {
                     </MenuItem>
                   ))}
                 </Select> */}
-              </Box>
+              {/* </Box> */}
             </ListItem>
           </List>
         </Grid>
@@ -218,9 +218,9 @@ export default function SearchScreen() {
               Results
               {query !== 'all' && query !== '' && ' : ' + query}
               {price !== 'all' && ' : Price ' + price}
-              {rating !== 'all' && ' : Rating ' + rating + ' & up'}
+              {/* {rating !== 'all' && ' : Rating ' + rating + ' & up'} */}
               {(query !== 'all' && query !== '') ||
-              rating !== 'all' ||
+              // rating !== 'all' ||
               price !== 'all' ? (
                 <Button onClick={() => router.push('/search')}>X</Button>
               ) : null}
