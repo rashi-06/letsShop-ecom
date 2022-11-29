@@ -155,8 +155,9 @@ function OrderScreen({ params }) {
 
   return (
     <Layout title={`Order ${orderId}`}>
-      <Typography component="h1" variant="h1">
-        Order {orderId}
+      <Typography component="h1" variant="h1" align="center">
+        Ordered Successfully 
+        <div>order id : {orderId}</div>
       </Typography>
 
       {loading ? (

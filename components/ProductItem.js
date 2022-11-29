@@ -23,16 +23,19 @@ export default function ProductItem({ product, addToCartHandler }) {
             title={product.name}
           ></CardMedia>
           <CardContent>
-            <Typography>{product.name}</Typography>
-            <Rating value={product.rating} readOnly></Rating>
+            <Typography align="center" variant="h1">{product.name}</Typography>
           </CardContent>
         </CardActionArea>
       </NextLink>
       <CardActions>
         <Typography>₹{product.price}</Typography>
+        <Typography>
+          
+        </Typography>
         <Button
           size="small"
           color="primary"
+          align="right"
           onClick={() => addToCartHandler(product)}
         >
           Add to cart

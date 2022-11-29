@@ -24,15 +24,15 @@ import { Store } from '../utils/Store';
 
 const prices = [
   {
-    name: '$1 to $50',
+    name: '₹1 to ₹50',
     value: '1-50',
   },
   {
-    name: '$51 to $200',
+    name: '₹51 to ₹200',
     value: '51-200',
   },
   {
-    name: '$201 to $1000',
+    name: '₹201 to ₹1000',
     value: '201-1000',
   },
 ];
@@ -197,7 +197,7 @@ export default function SearchScreen() {
             </ListItem>
             <ListItem>
               <Box sx={classes.fullWidth}>
-                <Typography>Ratings</Typography>
+                {/* <Typography>Ratings</Typography>
                 <Select value={rating} onChange={ratingHandler} fullWidth>
                   <MenuItem value="all">All</MenuItem>
                   {ratings.map((rating) => (
@@ -206,7 +206,7 @@ export default function SearchScreen() {
                       <Typography component="span">&amp; Up</Typography>
                     </MenuItem>
                   ))}
-                </Select>
+                </Select> */}
               </Box>
             </ListItem>
           </List>
@@ -234,7 +234,7 @@ export default function SearchScreen() {
                 <MenuItem value="default">Default</MenuItem>
                 <MenuItem value="lowest">Price: Low to High</MenuItem>
                 <MenuItem value="highest">Price: High to Low</MenuItem>
-                <MenuItem value="toprated">Customer Reviews</MenuItem>
+                {/* <MenuItem value="toprated">Customer Reviews</MenuItem> */}
               </Select>
             </Grid>
           </Grid>
