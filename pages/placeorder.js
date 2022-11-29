@@ -205,7 +205,7 @@ function PlaceOrderScreen() {
                     <Typography>Items:</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography align="right">${itemsPrice}</Typography>
+                    <Typography align="right">₹{itemsPrice}</Typography>
                   </Grid>
                 </Grid>
               </ListItem>
@@ -215,7 +215,18 @@ function PlaceOrderScreen() {
                     <Typography>Shipping:</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography align="right">${shippingPrice}</Typography>
+                    <Typography align="right">₹{shippingPrice}</Typography>
+                  </Grid>
+                </Grid>
+              </ListItem>
+
+              <ListItem>
+                <Grid container>
+                  <Grid item xs={6}>
+                    <Typography>Tax:</Typography>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Typography align="right">₹{taxPrice}</Typography>
                   </Grid>
                 </Grid>
               </ListItem>
@@ -228,7 +239,7 @@ function PlaceOrderScreen() {
                   </Grid>
                   <Grid item xs={6}>
                     <Typography align="right">
-                      <strong>${totalPrice}</strong>
+                      <strong>₹{totalPrice} or ${totalPrice*0.012}</strong>
                     </Typography>
                   </Grid>
                 </Grid>
