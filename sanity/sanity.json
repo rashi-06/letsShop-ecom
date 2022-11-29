@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "letsShop"
+    "name": "letsshop"
   },
   "api": {
-    "projectId": "w8get3up",
+    "projectId": "ycyd1ydp",
     "dataset": "production"
   },
   "plugins": [
