@@ -15,7 +15,7 @@ import { urlForThumbnail } from '../utils/image';
 export default function ProductItem({ product, addToCartHandler }) {
   return (
     <Card>
-      {/* <NextLink href={`/product/${product.slug.current}`} passHref> */}
+      <NextLink href={`/product/${product.slug.current}`} passHref>
         <CardActionArea>
           <CardMedia
             component="img"
@@ -27,7 +27,7 @@ export default function ProductItem({ product, addToCartHandler }) {
             <Rating value={product.rating} readOnly></Rating>
           </CardContent>
         </CardActionArea>
-      {/* </NextLink> */}
+      </NextLink>
       <CardActions>
         <Typography>${product.price}</Typography>
         <Button

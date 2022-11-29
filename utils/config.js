@@ -1,5 +1,5 @@
 const config = {
-  projectId: 'w8get3up',
+  projectId: 'ycyd1ydp',
   dataset: 'production',
 };
 export default config;

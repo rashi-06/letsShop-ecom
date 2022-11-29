@@ -57,7 +57,7 @@ function ProfileScreen() {
   return (
     <Layout title="Profile">
       <Typography component="h1" variant="h1">
-        Profile
+       Update Profile
       </Typography>
       <Form onSubmit={handleSubmit(submitHandler)}>
         <List>
@@ -135,7 +135,7 @@ function ProfileScreen() {
                   variant="outlined"
                   fullWidth
                   id="password"
-                  label="password"
+                  label="New Password"
                   inputProps={{ type: 'password' }}
                   error={Boolean(errors.password)}
                   helperText={
