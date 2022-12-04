@@ -1,5 +1,5 @@
 {
-  "name": "letsShop",
+  "name": "letsshop",
   "private": true,
   "scripts": {
     "dev": "next dev",
